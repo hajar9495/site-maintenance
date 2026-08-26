@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  /* Fond original Version 1 : Dégradé bleu ardoise sombre */
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Canvas sous la carte */
+#particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Carte centrale */
+.container {
+  width: 100%;
+  max-width: 550px;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* Badge V1 */
+.badge {
+  display: inline-block;
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+/* Barre de progression */
+.progress-wrapper {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #334155;
+  border-radius: 4px;
+  overflow: hidden;
+}
+/* option 1 */
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  border-radius: 4px;
+  transition: width 0.4s ease;
+  animation: fillProgress 1.5s ease-out forwards;
+}
+@keyframes fillProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 25%;
+  }
+}
+
+/* Contact & Nouveau Bouton Gris Ardoise / Zinc */
+.contact-section p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-bottom: 12px;
+}
+
+.btn {
+  display: inline-block;
+  background: #059669;
+  /* #d97706 Gris ardoise classe, pas de bleu vif */
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: #047857;
+  /* #f59e0*/
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(5, 150, 105, 0.4);
+  /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);*/
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Réseaux sociaux */
+.social-links {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #f8fafc;
+}
